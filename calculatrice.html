@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background: linear-gradient(-45deg, #d9a7c7, #1c92d2, #fffcdc);
+    background-size:400% 400%;
+    animation: gradient 15s ease infinite;
+}
+#affichage{
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size:36px;
+    border:solid 1px black;
+    width:90%;
+    height:3em;
+    padding-left:0.5em;
+    margin-top:2em;
+    margin-bottom:0.5em;
+    background:#fffcdc;
+}
+#calculatrice{
+    width:25%;
+    margin:auto auto;
+    align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#input{
+    width:90%;
+}
+.controle,.rang1,.rang2,.rang3,.rang4{
+    display:flex;
+}
+.btn{
+    text-align:center;
+    padding-top:1em;
+    padding-bottom:1em;
+    width:25%;
+    border-radius:40%;
+    background:#eb4034;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+}
+.pressed{
+    background:#eb4050;
+}
+.operateur{
+    background:#3462ed;
+}
+
+        @keyframes gradient{
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <section id="calculatrice">
+            <div id="affichage"></div>
+            <div id="input">
+
+                <div class="controle">
+                    <div class="btn "></div>
+                    <div class="btn " id="videTout">CA</div>
+                    <div class="btn " id="videUn">&#8592;</div>
+                    <div class="btn operateur" id="exposant">x<sup>y</sup></div>
+                </div>
+                <div class="rang1">
+                    <div class="btn chiffre">7</div>
+                    <div class="btn chiffre">8</div>
+                    <div class="btn chiffre">9</div>
+                    <div class="btn operateur">&divide;</div>
+                </div>
+                <div class="rang2">
+                    <div class="btn chiffre">4</div>
+                    <div class="btn chiffre">5</div>
+                    <div class="btn chiffre">6</div>
+                    <div class="btn operateur">&times;</div>
+                </div>
+                <div class="rang3">
+                    <div class="btn chiffre">1</div>
+                    <div class="btn chiffre">2</div>
+                    <div class="btn chiffre">3</div>
+                    <div class="btn operateur">&minus;</div>
+                </div>
+                <div class="rang4">
+                    <div class="btn chiffre">0</div>
+                    <div class="btn" id="decimal">.</div>
+                    <div class="btn" id="egale">=</div>
+                    <div class="btn operateur">&plus;</div>
+                </div>
+            </div>       
+        </section>    
+        <script src="index.js">
+        </script>
+    </body>
+</html>
