@@ -9,6 +9,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font:bold 1rem 'Annie Use Your Telescope', cursive;
 }
 body{
     background: linear-gradient(-45deg, #d9a7c7, #1c92d2, #fffcdc);
@@ -16,24 +17,26 @@ body{
     animation: gradient 15s ease infinite;
 }
 #affichage{
-    font-family: 'Annie Use Your Telescope', cursive;
     font-size:36px;
+    background-color:#bccd95;
     border:solid 1px black;
     width:90%;
     height:3em;
     padding-left:0.5em;
-    margin-top:2em;
     margin-bottom:0.5em;
     background:#fffcdc;
 }
 #calculatrice{
-    width:25%;
-    margin:auto auto;
+    background-color:#3d4543;
+    width:30%;
+    padding:3em 0 2em 0;
+    margin:3em auto;
     align:center;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    border:1px solid black
 }
 #input{
     width:90%;
@@ -42,36 +45,59 @@ body{
     display:flex;
 }
 .btn{
-    text-align:center;
-    padding-top:1em;
-    padding-bottom:1em;
+    font-size:1.5rem;
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-left:2%;
+    padding-left:5%;
+    border-radius:10%;
     width:25%;
-    border-radius:40%;
+    height:2.5em;
     background:#eb4034;
+    display: inline-flex;
+    align-items: center; 
     -moz-user-select:none;
     -webkit-user-select:none;
     -ms-user-select:none;
     user-select:none;
+    border-bottom:black 2px solid;
+    border-top:2px FF9933 solid;
 
 }
 .pressed{
-    background:#eb4050;
+    background:#eb4050 !important;
 }
 .operateur{
     background:#3462ed;
+    font-size: 2rem;
+    height: 3.5rem;
+}
+#egale{
+    background: #FF9933;
+
+}
+.btn:active
+    {
+    border-top:black 2px solid;
+    border-bottom:FF9933 2px solid;
 }
 
-        @keyframes gradient{
-            0%{
-                background-position: 0% 50%;
-            }
-            50%{
-                background-position: 100% 50%;
-            }
-            100%{
-                background-position: 0% 50%;
-            }
-        }
+                                            @keyframes gradient{
+                                                0%{
+                                                    background-position: 0% 50%;
+                                                }
+                                                50%{
+                                                    background-position: 100% 50%;
+                                                }
+                                                100%{
+                                                    background-position: 0% 50%;
+                                                }
+                                            }
+                                            @media screen and (max-width: 1000px) {
+                                                #calculatrice {
+                                                    width: 50%;
+                                                }
+                                            }
         </style>
     </head>
     <body>
@@ -80,7 +106,7 @@ body{
             <div id="input">
 
                 <div class="controle">
-                    <div class="btn "></div>
+                    <div class="btn " id="ans">ANS</div>
                     <div class="btn " id="videTout">CA</div>
                     <div class="btn " id="videUn">&#8592;</div>
                     <div class="btn operateur" id="exposant">x<sup>y</sup></div>
